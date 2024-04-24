@@ -1,0 +1,11 @@
+pages:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  script:
+    - mkdir public
+    - cp {index.html,assets} public -r
+  artifacts:
+    paths:
+      - public
+  
