@@ -1,10 +1,12 @@
 pages:
+  image: python:latest
   stage: deploy
   rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   script:
-    - mkdir public
-    - cp {index.html,assets} public -r
+    - pip3 install -r requirements.txt
+    - mkdocs build --strict --verbose --site-dir public
   artifacts:
     paths:
       - public

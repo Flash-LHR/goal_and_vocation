@@ -1,0 +1,47 @@
+# mkdocs.yml
+site_name: 期末目标与旅游资格
+
+nav:
+  - 主页: index.md
+  - 旅游: vocation.md
+  - 期末目标:
+    - 霖珊: study_goal/ls.md
+    - 政宏: study_goal/zh.md
+  - 学习计划:
+    - 霖珊: study_plan/ls.md
+    - 政宏: study_plan/zh.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.keys
+  - toc:
+      permalink: True
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+theme:
+  name: material
+  features:
+    - navigation.path
+    - navigation.expand
+    # - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+
+plugins:
+  - search
+  - mkdocstrings
+  - autorefs
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
