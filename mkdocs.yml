@@ -10,6 +10,13 @@ nav:
   - 学习计划:
     - 霖珊: study_plan/ls.md
     - 政宏: study_plan/zh.md
+  - 学习记录:
+    - 霖珊:
+      - 2024/05/13 ~ 2024/05/19: study_record/ls/20240513_20240519/README.md
+      - 2024/05/20 ~ 2024/05/26: study_record/ls/20240520_20240526/README.md
+    - 政宏:
+      - 2024/05/13 ~ 2024/05/19: study_record/zh/20240513_20240519/README.md
+      - 2024/05/20 ~ 2024/05/26: study_record/zh/20240520_20240526/README.md
 
 markdown_extensions:
   - admonition
@@ -20,6 +27,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.keys
+  - attr_list
+  - md_in_html
   - toc:
       permalink: True
   - pymdownx.arithmatex:
