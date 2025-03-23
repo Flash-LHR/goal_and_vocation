@@ -2,13 +2,13 @@
 
 ## 目标与成绩
 
-<table style="width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse;">
+<table style="width: 80%; max-width: 500px; margin: 0 auto; border-collapse: collapse;">
   <thead>
     <tr>
-      <th style="width: 25%; text-align: center; padding: 3px; border: 1px solid #ddd;">科目</th>
-      <th style="width: 25%; text-align: center; padding: 3px; border: 1px solid #ddd;">目标</th>
-      <th style="width: 25%; text-align: center; padding: 3px; border: 1px solid #ddd;">成绩</th>
-      <th style="width: 25%; text-align: center; padding: 3px; border: 1px solid #ddd;">奖惩</th>
+      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">科目</th>
+      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">目标</th>
+      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">成绩</th>
+      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">奖惩</th>
     </tr>
   </thead>
   <tbody>
