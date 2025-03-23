@@ -2,81 +2,81 @@
 
 ## 目标与成绩
 
-<table style="width: 80%; max-width: 500px; margin: 0 auto; border-collapse: collapse;">
+<table style="width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; font-size: 13px; font-family: Arial, sans-serif;">
   <thead>
     <tr>
-      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">科目</th>
-      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">目标</th>
-      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">成绩</th>
-      <th style="width: 20%; text-align: center; padding: 3px; border: 1px solid #ddd;">奖惩</th>
+      <th style="width: 20%; text-align: center; padding: 1px; border: 1px solid #ddd;">科目</th>
+      <th style="width: 20%; text-align: center; padding: 1px; border: 1px solid #ddd;">目标</th>
+      <th style="width: 20%; text-align: center; padding: 1px; border: 1px solid #ddd;">成绩</th>
+      <th style="width: 20%; text-align: center; padding: 1px; border: 1px solid #ddd;">奖惩</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">语文</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">85</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">93</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">165</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">语文</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">85</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">93</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">165</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">数学</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">100</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">190</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">数学</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">100</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">190</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">英语</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">60</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">88</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">340</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">英语</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">60</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">88</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">340</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">美术</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">85</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">80</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">-50</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">美术</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">85</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">80</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">-50</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">舞蹈</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">94</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">130</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">舞蹈</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">94</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">130</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">钢琴</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">91</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">100</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">钢琴</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">91</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">100</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">声乐</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">93</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">120</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">声乐</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">93</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">120</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">政治</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">88</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:red">-20</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">政治</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">88</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:red">-20</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">保育</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">91.5</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">105</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">保育</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">91.5</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">105</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">教育</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">90</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">100</span></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><span style="color:green">190</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">教育</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">90</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">100</span></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><span style="color:green">190</span></td>
     </tr>
     <tr>
-      <td style="text-align: center; border: 1px solid #ddd;"><strong>总计</strong></td>
-      <td style="text-align: center; border: 1px solid #ddd;"></td>
-      <td style="text-align: center; border: 1px solid #ddd;"></td>
-      <td style="text-align: center; border: 1px solid #ddd;"><strong>1270</strong></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><strong>总计</strong></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"></td>
+      <td style="text-align: center; padding: 1px; border: 1px solid #ddd;"><strong>1270</strong></td>
     </tr>
   </tbody>
 </table>
