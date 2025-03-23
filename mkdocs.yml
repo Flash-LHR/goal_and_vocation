@@ -20,11 +20,19 @@ nav:
       - 2024/06/03 ~ 2024/06/09: study_record/ls/20240603_20240609/README.md
       - 2024/11/25 ~ 2024/12/01: study_record/ls/20241125_20241201/README.md
       - 2024/12/09 ~ 2024/12/15: study_record/ls/20241209_20241215/README.md
+      - 2024/12/16 ~ 2024/12/22: study_record/ls/20241216_20241222/README.md
+      - 2024/12/30 ~ 2025/01/05: study_record/ls/20241230_20250105/README.md
+      - 2025/02/10 ~ 2025/02/16: study_record/ls/20250210_20250216/README.md
+      - 2025/02/17 ~ 2025/02/23: study_record/ls/20250217_20250223/README.md
+      - 2025/02/24 ~ 2025/03/02: study_record/ls/20250224_20250302/README.md
+      - 2025/03/03 ~ 2025/03/09: study_record/ls/20250303_20250309/README.md
+      - 2025/03/10 ~ 2025/03/16: study_record/ls/20250310_20250316/README.md
     - 政宏:
       - 2024/05/13 ~ 2024/05/19: study_record/zh/20240513_20240519/README.md
       - 2024/05/20 ~ 2024/05/26: study_record/zh/20240520_20240526/README.md
       - 2024/05/27 ~ 2024/06/02: study_record/zh/20240527_20240602/README.md
       - 2024/06/03 ~ 2024/06/09: study_record/zh/20240603_20240609/README.md
+      - 2025/01/20 ~ 2025/01/26: study_record/zh/20250120_20250126/README.md
 
 markdown_extensions:
   - admonition
