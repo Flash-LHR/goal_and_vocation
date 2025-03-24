@@ -2,7 +2,7 @@
 
 ## 目标与成绩
 
-<table style="max-width: 500px; margin: 0 auto; border-collapse: collapse; font-size: 13px; font-family: Arial, sans-serif; table-layout: auto;">
+<table style="max-width: 200px; margin: 0 auto; border-collapse: collapse; font-size: 13px; font-family: Arial, sans-serif; table-layout: auto;">
   <thead>
     <tr>
       <th style="text-align: center; padding: 1px 4px; border: 1px solid #ddd; white-space: nowrap;">科目</th>
