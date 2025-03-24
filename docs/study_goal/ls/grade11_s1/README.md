@@ -1,7 +1,6 @@
 # 霖珊的期末目标 高二上学期
 
 <link rel="stylesheet" href="./assets/css/goal-styles.css">
-<script src="./assets/js/goal-animations.js"></script>
 
 ## 目标与成绩
 
