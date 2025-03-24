@@ -1,0 +1,856 @@
+/* 主表格样式 */
+.score-table {
+    max-width: 500px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(218, 165, 32, 0.3), 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 223, 0, 0.1);
+    margin: 25px 0;
+    background: linear-gradient(135deg, #fffcf0, #fff5d6, #fff8e1);
+    position: relative;
+}
+
+.score-table:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-size: 12px 12px;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 18px;
+}
+
+.score-table:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 215, 0, 0.05) 0%,
+            rgba(255, 215, 0, 0) 20%,
+            rgba(255, 215, 0, 0.05) 40%,
+            rgba(255, 215, 0, 0) 60%,
+            rgba(255, 215, 0, 0.05) 80%,
+            rgba(255, 215, 0, 0) 100%);
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite linear;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 18px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+/* 表头样式 */
+.score-table thead {
+    background: linear-gradient(135deg, #fff0a0, #ffd700, #ffbf00, #ffd700, #fff0a0);
+    background-size: 200% 200%;
+    animation: goldWave 5s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 恢复圆角设置 */
+.score-table thead tr:first-child th:first-child {
+    border-top-left-radius: 16px;
+}
+
+.score-table thead tr:first-child th:last-child {
+    border-top-right-radius: 16px;
+}
+
+.score-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+}
+
+.score-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+}
+
+/* 波光粼粼动画 */
+@keyframes goldWave {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* 表头波光效果 */
+.score-table thead::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: shimmerWave 8s infinite linear;
+    pointer-events: none;
+    transform: rotate(30deg);
+    z-index: 3;
+}
+
+/* 底部金边 */
+.score-table thead::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 1), rgba(255, 215, 0, 0.2));
+    z-index: 2;
+}
+
+/* 波纹光影效果 */
+.score-table thead .wave-effect {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(45deg,
+            rgba(255, 215, 0, 0) 0%,
+            rgba(255, 215, 0, 0.03) 30%,
+            rgba(255, 215, 0, 0.1) 47%,
+            rgba(255, 215, 0, 0.03) 64%,
+            rgba(255, 215, 0, 0) 100%);
+    background-size: 200% 200%;
+    animation: goldRipple 7s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 4;
+}
+
+@keyframes shimmerWave {
+    0% {
+        transform: translate(-30%, -30%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-30%, -30%) rotate(360deg);
+    }
+}
+
+/* 表头文字闪烁效果 */
+.score-table thead th {
+    padding: 16px 10px;
+    font-weight: bold;
+    color: #6d4c00;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 223, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    z-index: 5;
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 223, 0, 0.3);
+    }
+
+    100% {
+        text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 223, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+}
+
+@keyframes goldRipple {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+/* 表头底部线条 */
+.score-table thead th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 215, 0, 0.5);
+}
+
+/* 表格内容样式 */
+.score-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.score-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 248, 225, 0.5);
+}
+
+.score-table tbody tr:hover {
+    background-color: rgba(255, 223, 128, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(218, 165, 32, 0.15);
+}
+
+.cell {
+    width: 25%;
+    text-align: center;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+    padding: 14px 10px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* 文本样式 */
+.green {
+    color: #1e7e45;
+    font-weight: 600;
+    text-shadow: 0 0 1px rgba(46, 139, 87, 0.2);
+}
+
+.red {
+    color: #c82333;
+    font-weight: 600;
+    text-shadow: 0 0 1px rgba(220, 53, 69, 0.2);
+}
+
+strong {
+    color: #6d4c00;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* 第一个表格链接样式 */
+.score-table a {
+    color: #4472ab;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.score-table a:hover {
+    color: #156b38;
+    text-decoration: none !important;
+}
+
+.score-table a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0;
+    /* 将高度改为0，移除线条 */
+    bottom: -2px;
+    left: 0;
+    background-color: transparent;
+    /* 将背景改为透明，移除线条 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.score-table a:hover:after {
+    transform: scaleX(0);
+    /* 确保hover时也不显示 */
+}
+
+/* 第二个表格整体样式 */
+.reward-table {
+    position: relative;
+    background: linear-gradient(to bottom,
+            rgba(255, 250, 240, 0.7) 0%,
+            rgba(255, 249, 235, 0.7) 5%,
+            rgba(255, 247, 230, 0.7) 10%,
+            rgba(255, 245, 225, 0.7) 15%,
+            rgba(255, 243, 220, 0.7) 20%,
+            rgba(255, 241, 215, 0.7) 25%,
+            rgba(255, 238, 205, 0.7) 30%,
+            rgba(255, 235, 195, 0.7) 35%,
+            rgba(255, 232, 185, 0.7) 40%,
+            rgba(255, 229, 175, 0.7) 45%,
+            rgba(255, 225, 165, 0.7) 50%,
+            rgba(255, 222, 155, 0.7) 55%,
+            rgba(255, 219, 145, 0.7) 60%,
+            rgba(255, 215, 135, 0.7) 65%,
+            rgba(255, 212, 125, 0.7) 70%,
+            rgba(255, 209, 115, 0.7) 75%,
+            rgba(255, 206, 105, 0.7) 80%,
+            rgba(255, 203, 95, 0.7) 85%,
+            rgba(255, 201, 90, 0.7) 90%,
+            rgba(255, 198, 85, 0.7) 95%,
+            rgba(255, 195, 80, 0.7) 100%);
+}
+
+.reward-table:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,
+            rgba(255, 235, 195, 0.2) 0%,
+            rgba(255, 235, 195, 0.05) 100%);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 0 0 16px 16px;
+}
+
+/* 第二个表格行样式 */
+.reward-table tr {
+    position: relative;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 2;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: transform 0.3s ease, background 0.3s ease;
+    line-height: 1.5;
+    height: 48px;
+}
+
+.reward-table tr td,
+.reward-table tr th {
+    border: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.reward-table tr:hover {
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.1) 50%, rgba(255, 215, 0, 0) 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.1) !important;
+    position: relative;
+    z-index: 4;
+}
+
+/* 第二个表格期数样式 */
+.reward-table tr td:first-child {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #8e6b16;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+    font-size: 1.05em;
+    position: relative;
+    overflow: visible;
+}
+
+.reward-table tr .cell:first-child:before {
+    display: inline-block;
+    margin-right: 5px;
+    color: transparent;
+    background: linear-gradient(to bottom, #ffd700, #daa520);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 3px rgba(255, 165, 0, 0.3);
+    animation: twinkle 1.5s infinite alternate;
+    opacity: 0.9;
+    position: relative;
+    z-index: 3;
+}
+
+.reward-table tr:nth-child(1) .cell:first-child:before {
+    font-size: 100%;
+    filter: brightness(1.05);
+}
+
+.reward-table tr:nth-child(2) .cell:first-child:before {
+    font-size: 102%;
+    filter: brightness(1.04);
+}
+
+.reward-table tr:nth-child(3) .cell:first-child:before {
+    font-size: 104%;
+    filter: brightness(1.03);
+}
+
+.reward-table tr:nth-child(4) .cell:first-child:before {
+    font-size: 106%;
+    filter: brightness(1.02);
+}
+
+.reward-table tr:nth-child(5) .cell:first-child:before {
+    font-size: 108%;
+    filter: brightness(1.01);
+}
+
+.reward-table tr:nth-child(6) .cell:first-child:before {
+    font-size: 110%;
+    filter: brightness(1);
+}
+
+.reward-table tr:nth-child(7) .cell:first-child:before {
+    font-size: 112%;
+    filter: brightness(0.99);
+}
+
+.reward-table tr:nth-child(8) .cell:first-child:before {
+    font-size: 114%;
+    filter: brightness(0.98);
+}
+
+.reward-table tr:nth-child(9) .cell:first-child:before {
+    font-size: 116%;
+    filter: brightness(0.97);
+}
+
+.reward-table tr:nth-child(10) .cell:first-child:before {
+    font-size: 118%;
+    filter: brightness(0.96);
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* 第二个表格日期链接样式 */
+.reward-table tr td:nth-child(2) a {
+    font-size: 0.92em;
+    font-family: 'Consolas', monospace;
+    color: #d4af37;
+    padding: 4px 8px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    font-weight: 600;
+    border-radius: 3px;
+    z-index: 5;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 背景高亮效果 */
+.reward-table tr td:nth-child(2) a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0), rgba(255, 215, 0, 0.1));
+    border-radius: 3px;
+    z-index: -1;
+    transition: all 0.3s ease;
+    transform: scale(0.85);
+    opacity: 0;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 移除边框效果 */
+.reward-table tr td:nth-child(2) a::after {
+    display: none !important;
+}
+
+.reward-table tr td:nth-child(2) a:hover::after {
+    display: none !important;
+}
+
+/* 第二个表格奖励金额样式 */
+.reward-table tr td:last-child {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #d4af37, #f9d423);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 1px 1px rgba(205, 127, 50, 0.2);
+    letter-spacing: 0.5px;
+    font-size: 1.1em;
+    position: relative;
+}
+
+/* 屏幕过渡动画 */
+@keyframes goldenExpand {
+    0% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1);
+        opacity: 0.8;
+    }
+
+    30% {
+        transform: scale(30) rotate(180deg);
+        filter: brightness(1.5);
+        opacity: 0.95;
+    }
+
+    70% {
+        transform: scale(80) rotate(360deg);
+        filter: brightness(2);
+        opacity: 0.98;
+    }
+
+    100% {
+        transform: scale(150) rotate(720deg);
+        filter: brightness(2.5);
+        opacity: 1;
+    }
+}
+
+@keyframes goldenRotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes starBurst {
+    0% {
+        transform: scale(0) rotate(0deg) translate(0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2) rotate(45deg) translate(var(--tx), var(--ty));
+        opacity: 0;
+    }
+}
+
+@keyframes shimmerWave {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.6);
+        filter: hue-rotate(0deg);
+    }
+
+    25% {
+        box-shadow: 0 0 60px 15px rgba(255, 215, 0, 0.8);
+        filter: hue-rotate(45deg);
+    }
+
+    50% {
+        box-shadow: 0 0 100px 25px rgba(255, 215, 0, 0.9);
+        filter: hue-rotate(90deg);
+    }
+
+    75% {
+        box-shadow: 0 0 60px 15px rgba(255, 215, 0, 0.8);
+        filter: hue-rotate(45deg);
+    }
+
+    100% {
+        box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.6);
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes energyRing {
+    0% {
+        transform: scale(0.1) rotate(0deg);
+        opacity: 0.9;
+        border-width: 15px;
+    }
+
+    50% {
+        opacity: 0.7;
+        border-width: 5px;
+    }
+
+    100% {
+        transform: scale(3) rotate(360deg);
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+@keyframes float3D {
+    0% {
+        transform: translateZ(0) translateY(0) rotate3d(1, 1, 1, 0deg);
+    }
+
+    25% {
+        transform: translateZ(100px) translateY(-20px) rotate3d(1, 1, 1, 90deg);
+    }
+
+    50% {
+        transform: translateZ(0) translateY(0) rotate3d(1, 1, 1, 180deg);
+    }
+
+    75% {
+        transform: translateZ(-100px) translateY(20px) rotate3d(1, 1, 1, 270deg);
+    }
+
+    100% {
+        transform: translateZ(0) translateY(0) rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+@keyframes pulse3D {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.5, 1.5, 2);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes lightRay {
+    0% {
+        transform: rotate(0deg) translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: rotate(var(--angle)) translateY(1000px) scale(2);
+        opacity: 0;
+    }
+}
+
+/* 页面3D视角准备 */
+.perspective-container {
+    perspective: 1000px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10005;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* 金色遮罩层 */
+.golden-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at center,
+            rgba(255, 236, 130, 1) 0%,
+            rgba(255, 215, 0, 0.95) 30%,
+            rgba(218, 165, 32, 0.9) 60%,
+            rgba(184, 134, 11, 0.85) 100%);
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    mix-blend-mode: screen;
+}
+
+/* 主要扩散元素 */
+.gold-ripple {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fffde7 0%, #fff9c4 20%, #ffd700 50%, #ff9800 100%);
+    transform-origin: center;
+    z-index: 9999;
+    pointer-events: none;
+    box-shadow: 0 0 50px 20px rgba(255, 215, 0, 0.8);
+    opacity: 0;
+}
+
+/* 3D光环效果 */
+.energy-rings {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.energy-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    box-sizing: border-box;
+    transform-origin: center;
+}
+
+/* 额外的光晕效果 */
+.gold-glow {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid #fffde7;
+    transform-origin: center;
+    z-index: 10001;
+    pointer-events: none;
+    box-shadow: 0 0 30px 10px rgba(255, 230, 100, 0.9), inset 0 0 15px rgba(255, 255, 200, 0.8);
+    opacity: 0;
+}
+
+/* 3D几何体 */
+.geometric-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10002;
+    perspective: 1000px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.geometric {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #fffde7, #ffd700);
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+/* 粒子星星效果 */
+.gold-particles {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10003;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.gold-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffef62;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgba(255, 236, 97, 0.8);
+    filter: blur(0.5px);
+}
+
+/* 光线射线 */
+.light-rays {
+    position: fixed;
+    width: 1px;
+    height: 100vh;
+    left: 50%;
+    top: 0;
+    z-index: 10004;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.light-ray {
+    position: absolute;
+    width: 2px;
+    height: 500px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff9c4, rgba(255, 255, 255, 0));
+    transform-origin: top center;
+    top: 0;
+    left: 0;
+}
+
+/* 闪光波纹效果 */
+.shimmer-waves {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at center,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 30%,
+            rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10006;
+}
+
+/* GIF动画容器样式 */
+.gif-container {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+}
+
+.gif-container img {
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+    animation: pulse-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
