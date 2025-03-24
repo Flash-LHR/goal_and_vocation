@@ -1,6 +1,7 @@
 # 霖珊的期末目标 高二上学期
 
 <style>
+/* 主表格样式 */
 .score-table {
   max-width: 500px;
   width: 100%;
@@ -53,6 +54,7 @@
   100% { background-position: 200% 200%; }
 }
 
+/* 表头样式 */
 .score-table thead {
   background: linear-gradient(135deg, #ffd700, #ffbf00, #ffd700);
   position: relative;
@@ -104,6 +106,7 @@
   background: rgba(255, 215, 0, 0.5);
 }
 
+/* 表格内容样式 */
 .score-table tbody tr {
   transition: all 0.3s ease;
 }
@@ -128,6 +131,7 @@
   z-index: 2;
 }
 
+/* 文本样式 */
 .green {
   color: #1e7e45;
   font-weight: 600;
@@ -146,20 +150,20 @@ strong {
   letter-spacing: 0.5px;
 }
 
-/* 全局链接样式修改为仅适用于表格内的链接 */
-.score-table a, .reward-table a {
+/* 第一个表格链接样式 */
+.score-table a {
   color: #4472ab;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
 }
 
-.score-table a:hover, .reward-table a:hover {
-  color: #2b5889;
+.score-table a:hover {
+  color: #156b38;
   text-decoration: none;
 }
 
-.score-table a:after, .reward-table a:after {
+.score-table a:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -167,22 +171,18 @@ strong {
   height: 1px;
   bottom: -2px;
   left: 0;
-  background-color: #2b5889;
+  background-color: #156b38;
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
 
-.score-table a:hover:after, .reward-table a:hover:after {
+.score-table a:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-/* 删除全局a选择器 */
-
-/* 第二个表格特殊样式 - 极致平滑渐变效果 */
+/* 第二个表格整体样式 */
 .reward-table {
-  max-width: 500px;
-  width: 100%;
   position: relative;
   background: linear-gradient(to bottom, 
     rgba(255, 250, 240, 0.7) 0%,
@@ -206,7 +206,6 @@ strong {
     rgba(255, 201, 90, 0.7) 90%,
     rgba(255, 198, 85, 0.7) 95%,
     rgba(255, 195, 80, 0.7) 100%);
-  /* overflow: visible; */
 }
 
 .reward-table:after {
@@ -222,7 +221,20 @@ strong {
   pointer-events: none;
   z-index: 1;
   border-radius: 0 0 16px 16px;
-  backdrop-filter: blur(0px);
+}
+
+/* 第二个表格行样式 */
+.reward-table tr {
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  z-index: 2;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: transform 0.3s ease, background 0.3s ease;
+  line-height: 1.5;
+  height: 48px;
 }
 
 .reward-table tr td,
@@ -233,22 +245,21 @@ strong {
   box-shadow: none !important;
 }
 
-.reward-table tr {
+.reward-table tr:hover {
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.1) 50%, rgba(255, 215, 0, 0) 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(218, 165, 32, 0.1) !important;
   position: relative;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  z-index: 2;
-  margin: 0 !important;
-  padding: 0 !important;
-  transition: transform 0.3s ease, background 0.3s ease;
-  line-height: 1.5;
-  height: 48px;
+  z-index: 4;
 }
 
-.reward-table tr .cell:first-child {
+/* 第二个表格期数样式 */
+.reward-table tr td:first-child {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  color: #8e6b16;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  font-size: 1.05em;
   position: relative;
   overflow: visible;
 }
@@ -283,116 +294,49 @@ strong {
   100% { transform: scale(1.1); opacity: 1; }
 }
 
-.reward-table tr:hover {
-  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.1) 50%, rgba(255, 215, 0, 0) 100%) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(218, 165, 32, 0.1) !important;
-  position: relative;
-  z-index: 4;
-}
-
-/* 已有的时间文本样式 */
+/* 第二个表格日期链接样式 */
 .reward-table tr td:nth-child(2) a {
-  font-size: 0.85em;
-  letter-spacing: -0.2px;
-  color: #5a7ca8;
-}
-
-/* 美化第二个表格文字 */
-/* 期数样式 */
-.reward-table tr td:first-child {
-  font-family: 'Arial', sans-serif;
-  font-weight: 600;
-  color: #8e6b16;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
-  font-size: 1.05em;
-}
-
-/* 时间范围样式优化 */
-.reward-table tr td:nth-child(2) a {
-  font-size: 1.0em;
+  font-size: 0.82em;
   font-family: 'Consolas', monospace;
-  background: linear-gradient(45deg, #4d6b96, #6d8cb8);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  padding: 2px 4px;
-  position: relative;
-}
-
-/* 添加小图标效果 */
-.reward-table tr td:nth-child(2) a:before {
-  content: "📅";
-  font-size: 0.9em;
-  margin-right: 5px;
-  opacity: 0.8;
-  text-shadow: none;
-}
-
-/* 时间范围样式优化 - 更丰富多彩的渐变色彩 */
-.reward-table tr td:nth-child(2) a {
-  font-size: 0.80em;
-  font-family: 'Consolas', monospace;
-  background: linear-gradient(to right, 
-    #5170a3 0%, 
-    #6a93c5 25%, 
-    #7cc5f0 50%,
-    #6a93c5 75%,
-    #5170a3 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  /* padding: 3px 6px; */
-  border-radius: 4px;
+  color: #1e7e45;
+  padding: 3px 4px;
+  padding-bottom: 2px;
   position: relative;
   display: inline-block;
-  animation: shimmer-date 4s linear infinite;
   transition: all 0.3s ease;
-  position: relative;
-  z-index: 5;
+  text-decoration: none !important;
 }
 
-/* 添加日期背景和边框 */
-.reward-table tr td:nth-child(2) a:after {
+/* 底部黑线 */
+.reward-table tr td:nth-child(2) a::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  height: 2px;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  z-index: -1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  left: 0;
+  background: linear-gradient(to right, 
+    rgba(46, 139, 87, 0.3) 0%,
+    #2e8b57 20%, 
+    #1e7e45 50%,
+    #2e8b57 80%,
+    rgba(46, 139, 87, 0.3) 100%);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 3px rgba(46, 139, 87, 0.5);
 }
 
-/* 鼠标悬停效果改进 */
+/* 简单hover效果 */
 .reward-table tr td:nth-child(2) a:hover {
-  background-position: right center;
-  transform: scale(1.05);
+  color: #156b38;
 }
 
-.reward-table tr td:nth-child(2) a:hover:after {
-  box-shadow: 0 2px 8px rgba(0, 107, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.4);
+.reward-table tr td:nth-child(2) a:hover::after {
+  transform: scaleX(1);
 }
 
-/* 日期背景动画 */
-@keyframes shimmer-date {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
-
-/* 奖励金额样式 */
+/* 第二个表格奖励金额样式 */
 .reward-table tr td:last-child {
   font-family: 'Arial', sans-serif;
   font-weight: 700;
