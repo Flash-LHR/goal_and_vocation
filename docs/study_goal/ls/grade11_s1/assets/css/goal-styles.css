@@ -1,0 +1,427 @@
+/* 主表格样式 */
+.score-table {
+    max-width: 500px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(218, 165, 32, 0.4), 0 0 15px rgba(255, 215, 0, 0.5), 0 0 30px rgba(255, 223, 0, 0.2);
+    margin: 25px 0;
+    background: linear-gradient(135deg, #fffcf0, #fff5d6, #fff8e1);
+    position: relative;
+}
+
+.score-table:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-size: 12px 12px;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 18px;
+}
+
+.score-table:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 215, 0, 0.12) 0%,
+            rgba(255, 215, 0, 0.05) 20%,
+            rgba(255, 215, 0, 0.12) 40%,
+            rgba(255, 215, 0, 0.05) 60%,
+            rgba(255, 215, 0, 0.12) 80%,
+            rgba(255, 215, 0, 0.05) 100%);
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite linear;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 18px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+/* 表头样式 */
+.score-table thead {
+    background: linear-gradient(135deg, #fff0a0, #ffd700, #ffbf00, #ffd700, #fff0a0);
+    background-size: 200% 200%;
+    animation: goldWave 5s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 恢复圆角设置 */
+.score-table thead tr:first-child th:first-child {
+    border-top-left-radius: 16px;
+}
+
+.score-table thead tr:first-child th:last-child {
+    border-top-right-radius: 16px;
+}
+
+.score-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+}
+
+.score-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+}
+
+/* 波光粼粼动画 */
+@keyframes goldWave {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* 表头波光效果 - 增强透明度和大小 */
+.score-table thead::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: shimmerWave 6s infinite linear;
+    pointer-events: none;
+    transform: rotate(30deg);
+    z-index: 3;
+}
+
+/* 底部金边 - 增强亮度 */
+.score-table thead::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 1), rgba(255, 215, 0, 0.3));
+    z-index: 2;
+}
+
+/* 波纹光影效果 - 显著增强不透明度和效果 */
+.score-table thead .wave-effect {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(45deg,
+            rgba(255, 215, 0, 0) 0%,
+            rgba(255, 215, 0, 0.08) 30%,
+            rgba(255, 215, 0, 0.2) 47%,
+            rgba(255, 215, 0, 0.08) 64%,
+            rgba(255, 215, 0, 0) 100%);
+    background-size: 200% 200%;
+    animation: goldRipple 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 4;
+}
+
+@keyframes shimmerWave {
+    0% {
+        transform: translate(-30%, -30%) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-30%, -30%) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+/* 表头文字闪烁效果 - 增强闪烁 */
+.score-table thead th {
+    padding: 16px 10px;
+    font-weight: bold;
+    color: #6d4c00;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 223, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    z-index: 5;
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.9), 0 0 5px rgba(255, 223, 0, 0.5);
+    }
+
+    100% {
+        text-shadow: 0px 1px 2px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 223, 0, 0.7), 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+}
+
+@keyframes goldRipple {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+/* 表头底部线条 */
+.score-table thead th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 215, 0, 0.5);
+}
+
+/* 表格内容样式 */
+.score-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.score-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 248, 225, 0.5);
+}
+
+.score-table tbody tr:hover {
+    background-color: rgba(255, 223, 128, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(218, 165, 32, 0.15);
+}
+
+.cell {
+    width: 25%;
+    text-align: center;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+    padding: 14px 10px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* 文本样式 */
+.green {
+    color: #1e7e45;
+    font-weight: 600;
+    text-shadow: 0 0 1px rgba(46, 139, 87, 0.2);
+}
+
+.red {
+    color: #c82333;
+    font-weight: 600;
+    text-shadow: 0 0 1px rgba(220, 53, 69, 0.2);
+}
+
+strong {
+    color: #6d4c00;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* 第一个表格链接样式 */
+.score-table a {
+    color: #4472ab;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.score-table a:hover {
+    color: #156b38;
+    text-decoration: none !important;
+}
+
+/* 第二个表格整体样式 - 增强渐变色对比度 */
+.reward-table {
+    position: relative;
+    background: linear-gradient(to bottom,
+            rgba(255, 250, 240, 0.8) 0%,
+            rgba(255, 249, 235, 0.8) 5%,
+            rgba(255, 247, 230, 0.8) 10%,
+            rgba(255, 245, 225, 0.8) 15%,
+            rgba(255, 243, 220, 0.8) 20%,
+            rgba(255, 241, 215, 0.8) 25%,
+            rgba(255, 238, 205, 0.8) 30%,
+            rgba(255, 235, 195, 0.8) 35%,
+            rgba(255, 232, 185, 0.8) 40%,
+            rgba(255, 229, 175, 0.8) 45%,
+            rgba(255, 225, 165, 0.8) 50%,
+            rgba(255, 222, 155, 0.8) 55%,
+            rgba(255, 219, 145, 0.8) 60%,
+            rgba(255, 215, 135, 0.8) 65%,
+            rgba(255, 212, 125, 0.8) 70%,
+            rgba(255, 209, 115, 0.8) 75%,
+            rgba(255, 206, 105, 0.8) 80%,
+            rgba(255, 203, 95, 0.8) 85%,
+            rgba(255, 201, 90, 0.8) 90%,
+            rgba(255, 198, 85, 0.8) 95%,
+            rgba(255, 195, 80, 0.8) 100%);
+}
+
+/* 第二个表格闪光效果 - 新增波光效果 */
+.reward-table:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 215, 0, 0) 0%,
+            rgba(255, 215, 0, 0.05) 25%,
+            rgba(255, 215, 0, 0.1) 50%,
+            rgba(255, 215, 0, 0.05) 75%,
+            rgba(255, 215, 0, 0) 100%);
+    background-size: 300% 300%;
+    animation: rewardTableShimmer 8s infinite linear;
+    pointer-events: none;
+    z-index: 2;
+    border-radius: 0 0 16px 16px;
+}
+
+@keyframes rewardTableShimmer {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.reward-table:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,
+            rgba(255, 235, 195, 0.3) 0%,
+            rgba(255, 235, 195, 0.1) 100%);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 0 0 16px 16px;
+}
+
+/* 第二个表格行样式 */
+.reward-table tr {
+    position: relative;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 2;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: transform 0.3s ease, background 0.3s ease;
+    line-height: 1.5;
+    height: 48px;
+}
+
+.reward-table tr td,
+.reward-table tr th {
+    border: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.reward-table tr:hover {
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.1) 50%, rgba(255, 215, 0, 0) 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.1) !important;
+    position: relative;
+    z-index: 4;
+}
+
+/* 第二个表格期数样式 */
+.reward-table tr td:first-child {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #8e6b16;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+    font-size: 1.05em;
+    position: relative;
+    overflow: visible;
+}
+
+/* 第二个表格日期链接样式 - 保留基本样式但移除特效 */
+.reward-table tr td:nth-child(2) a {
+    font-size: 0.92em;
+    font-family: 'Consolas', monospace;
+    color: #d4af37;
+    padding: 4px 8px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    font-weight: 600;
+    border-radius: 3px;
+    z-index: 5;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 第二个表格奖励金额样式 */
+.reward-table tr td:last-child {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #d4af37, #f9d423);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 1px 1px rgba(205, 127, 50, 0.2);
+    letter-spacing: 0.5px;
+    font-size: 1.1em;
+    position: relative;
+}
+
+/* 简单的hover效果，替代复杂动画 */
+.reward-table tr td:nth-child(2) a:hover {
+    background-color: rgba(255, 215, 0, 0.15);
+    color: #b8860b;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(218, 165, 32, 0.2) !important;
+}
