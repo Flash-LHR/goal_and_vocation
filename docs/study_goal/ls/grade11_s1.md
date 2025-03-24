@@ -110,11 +110,23 @@
 >
 > *注：奖励金额单位为元*
 
-
 ## 奖惩执行情况
 
 总计奖励 1270 元，分 10 期发放，每期奖励 127 元。奖励将与双完美计划挂钩，每完成一次双完美计划即可获得一期奖励，激励学习持续进步。
 
-| 期数 | 双完美计划 | 奖励金额 |
-| ---- | ---------- | -------- |
-| 1    | [2025/03/10 ~ 2025/03/16](../../study_record/ls/20250310_20250316/README.md) | 127      |
+<table class="score-table">
+  <thead>
+    <tr>
+      <th class="cell">期数</th>
+      <th class="cell">双完美计划</th>
+      <th class="cell">奖励金额</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell">1</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+  </tbody>
+</table>
