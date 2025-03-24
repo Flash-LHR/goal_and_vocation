@@ -1153,11 +1153,119 @@ strong {
   z-index: 4;
 }
 
-/* 添加时间文本样式 - 缩小日期字号 */
+/* 已有的时间文本样式 */
 .reward-table tr td:nth-child(2) a {
-  font-size: 0.80em;
+  font-size: 0.85em;
   letter-spacing: -0.2px;
   color: #5a7ca8;
+}
+
+/* 美化第二个表格文字 */
+/* 期数样式 */
+.reward-table tr td:first-child {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  color: #8e6b16;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  font-size: 1.05em;
+}
+
+/* 时间范围样式优化 */
+.reward-table tr td:nth-child(2) a {
+  font-size: 1.0em;
+  font-family: 'Consolas', monospace;
+  background: linear-gradient(45deg, #4d6b96, #6d8cb8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  padding: 2px 4px;
+  position: relative;
+}
+
+/* 添加小图标效果 */
+.reward-table tr td:nth-child(2) a:before {
+  content: "📅";
+  font-size: 0.9em;
+  margin-right: 5px;
+  opacity: 0.8;
+  text-shadow: none;
+}
+
+/* 时间范围样式优化 - 更丰富多彩的渐变色彩 */
+.reward-table tr td:nth-child(2) a {
+  font-size: 0.80em;
+  font-family: 'Consolas', monospace;
+  background: linear-gradient(to right, 
+    #5170a3 0%, 
+    #6a93c5 25%, 
+    #7cc5f0 50%,
+    #6a93c5 75%,
+    #5170a3 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  /* padding: 3px 6px; */
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  animation: shimmer-date 4s linear infinite;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 5;
+}
+
+/* 添加日期背景和边框 */
+.reward-table tr td:nth-child(2) a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  z-index: -1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* 鼠标悬停效果改进 */
+.reward-table tr td:nth-child(2) a:hover {
+  background-position: right center;
+  transform: scale(1.05);
+}
+
+.reward-table tr td:nth-child(2) a:hover:after {
+  box-shadow: 0 2px 8px rgba(0, 107, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 日期背景动画 */
+@keyframes shimmer-date {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* 奖励金额样式 */
+.reward-table tr td:last-child {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(to right, #d4af37, #f9d423);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 1px 1px rgba(205, 127, 50, 0.2);
+  letter-spacing: 0.5px;
+  font-size: 1.1em;
+  position: relative;
 }
 </style>
 
@@ -1241,14 +1349,14 @@ strong {
   </tbody>
 </table>
 
-<blockquote>
-<p>奖惩计算公式</p>
+<details class="question">
+<summary>奖惩计算方法？</summary>
 <ul>
 <li>成绩达标或超标：奖励 = (成绩 - 目标) × 10 + 目标</li>
 <li>成绩未达标：惩罚 = (目标 - 成绩) × 10</li>
 </ul>
 <p><em>注：奖励金额单位为元</em></p>
-</blockquote>
+</details>
 <h2 id="_3">奖惩执行情况<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>总计奖励 1270 元，分 10 期发放，每期奖励 127 元。奖励将与双完美计划挂钩，每完成一次双完美计划即可获得一期奖励，激励学习持续进步。</p>
 <table class="score-table">
@@ -1262,52 +1370,7 @@ strong {
   <tbody class="reward-table">
     <tr>
       <td class="cell">1</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">2</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">3</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">4</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">5</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">6</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">7</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">8</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">9</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
-      <td class="cell">127</td>
-    </tr>
-    <tr>
-      <td class="cell">10</td>
-      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">03/10 ~ 03/16</a></td>
       <td class="cell">127</td>
     </tr>
   </tbody>
