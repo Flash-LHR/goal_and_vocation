@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 创建GIF元素
     const gifElement = document.createElement('img');
-    gifElement.src = '/goal_and_vocation/docs/study_goal/ls/grade11_s1/assets/1.gif';
+    gifElement.src = './gif/1.gif';
     gifElement.style.width = '120px';
     gifElement.style.height = '120px';
     gifElement.style.position = 'absolute';
