@@ -181,8 +181,8 @@ strong {
 
 /* 第二个表格特殊样式 - 极致平滑渐变效果 */
 .reward-table {
-  width: 80%;
   max-width: 500px;
+  width: 100%;
   position: relative;
   background: linear-gradient(to bottom, 
     rgba(255, 250, 240, 0.7) 0%,
@@ -206,10 +206,10 @@ strong {
     rgba(255, 201, 90, 0.7) 90%,
     rgba(255, 198, 85, 0.7) 95%,
     rgba(255, 195, 80, 0.7) 100%);
-  overflow: visible;
+  /* overflow: visible; */
 }
 
-.reward-table:after {
+/* .reward-table:after {
   content: "";
   position: absolute;
   top: 0;
@@ -225,7 +225,6 @@ strong {
   backdrop-filter: blur(0px);
 }
 
-/* 移除所有可能导致视觉分割的边框 */
 .reward-table tr td,
 .reward-table tr th {
   border: none !important;
@@ -238,7 +237,6 @@ strong {
   position: relative;
   background: transparent !important;
   border: none !important;
-  /* 移除表格行本身的任何阴影效果，改为在奖励指示器上增强视觉层次 */
   box-shadow: none !important;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
@@ -246,19 +244,16 @@ strong {
   margin: 0 !important;
   padding: 0 !important;
   transition: transform 0.3s ease, background 0.3s ease;
-  /* 确保行高一致，防止因行高差异造成的视觉断层 */
   line-height: 1.5;
   height: 48px;
 }
 
-/* 左侧装饰条改为渐变星星 */
 .reward-table tr .cell:first-child {
   position: relative;
   overflow: visible;
 }
 
 .reward-table tr .cell:first-child:before {
-  /* content: "★"; */
   display: inline-block;
   margin-right: 5px;
   color: transparent;
@@ -272,7 +267,6 @@ strong {
   z-index: 3;
 }
 
-/* 星星大小和亮度随行号变化，增强层次感但不影响平滑过渡 */
 .reward-table tr:nth-child(1) .cell:first-child:before { font-size: 100%; filter: brightness(1.05); }
 .reward-table tr:nth-child(2) .cell:first-child:before { font-size: 102%; filter: brightness(1.04); }
 .reward-table tr:nth-child(3) .cell:first-child:before { font-size: 104%; filter: brightness(1.03); }
@@ -289,14 +283,13 @@ strong {
   100% { transform: scale(1.1); opacity: 1; }
 }
 
-/* 悬停效果调整为更平滑的版本 */
 .reward-table tr:hover {
   background: radial-gradient(circle at center, rgba(255, 215, 0, 0.25) 0%, rgba(255, 215, 0, 0.1) 50%, rgba(255, 215, 0, 0) 100%) !important;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(218, 165, 32, 0.1) !important;
   position: relative;
   z-index: 4;
-}
+} */
 </style>
 
 ## 目标与成绩
@@ -399,6 +392,70 @@ strong {
       <th class="cell">奖励金额</th>
     </tr>
   </thead>
+  <tbody>
+    <tr>
+      <td class="cell">1</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">2</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">1</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">2</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">1</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">2</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">1</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">2</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">1</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">2</td>
+      <td class="cell"><a href="../../../study_record/ls/20250310_20250316/">2025/03/10 ~ 2025/03/16</a></td>
+      <td class="cell">127</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- <table class="score-table">
+  <thead>
+    <tr>
+      <th class="cell">期数</th>
+      <th class="cell">双完美计划</th>
+      <th class="cell">奖励金额</th>
+      <th class="cell">奖励金额</th>
+    </tr>
+  </thead>
   <tbody class="reward-table">
     <tr>
       <td class="cell">1</td>
@@ -451,4 +508,4 @@ strong {
       <td class="cell">127</td>
     </tr>
   </tbody>
-</table>
+</table> -->
