@@ -130,5 +130,15 @@
       <td class="cell"><a href="../../../study_record/ls/20250421_20250427/">04/21 ~ 04/27</a></td>
       <td class="cell">127</td>
     </tr>
+    <tr>
+      <td class="cell">6</td>
+      <td class="cell"><a href="../../../study_record/ls/20250512_20250518/">05/12 ~ 05/18</a></td>
+      <td class="cell">127</td>
+    </tr>
+    <tr>
+      <td class="cell">7</td>
+      <td class="cell"><a href="../../../study_record/ls/20250512_20250518/">05/12 ~ 05/18</a></td>
+      <td class="cell">127</td>
+    </tr>
   </tbody>
 </table>
