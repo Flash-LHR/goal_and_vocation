@@ -145,5 +145,10 @@
       <td class="cell"><a href="../../../study_record/ls/20250616_20250622/">06/16 ~ 06/22</a></td>
       <td class="cell">127</td>
     </tr>
+    <tr>
+      <td class="cell">9</td>
+      <td class="cell"><a href="../../../study_record/ls/20250714_20250720/">07/14 ~ 07/20</a></td>
+      <td class="cell">127</td>
+    </tr>
   </tbody>
 </table>
